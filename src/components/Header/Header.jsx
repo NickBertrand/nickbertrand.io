@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { HeaderLink } from '../HeaderLink';
 
 export default class Header extends Component {
   render() {
@@ -7,15 +8,15 @@ export default class Header extends Component {
       <header className="App-header">
           <Link to="/">Nick Bertrand</Link>
 
-          <NavLink to="/" activeClassName="hurray">
+          <HeaderLink link="/" activeClassName="hurray">
             Home
-          </NavLink>
-          <NavLink to="/resume" activeClassName="hurray">
-            Resume
-          </NavLink>
-          <NavLink to="/projects" activeClassName="hurray">
+          </HeaderLink>
+          <HeaderLink link="/projects" activeClassName="hurray">
             Projects
-          </NavLink>
+          </HeaderLink>
+          <HeaderLink link='/resume' activeClassName='hurray'>
+            Resume
+          </HeaderLink>
       </header>
     )
   }
