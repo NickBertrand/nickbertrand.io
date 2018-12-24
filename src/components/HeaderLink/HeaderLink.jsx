@@ -4,8 +4,12 @@ import styled from 'styled-components/macro'
 import { NavLink } from 'react-router-dom'
 
 
-function HeaderLink(props) {
-  const HeaderButton = styled.button`
+const HeaderLink = (props) => {
+  const activeClassName = 'active';
+
+  const HeaderButton = styled.button.attrs({
+    activeClassName: activeClassName
+  })`
     font-size: 1.2rem;
     color: white;
     background: transparent;
@@ -15,11 +19,19 @@ function HeaderLink(props) {
     padding: 0.25em 1em;
     text-decoration: none;
     font-weight: 300;
+
+    &.${activeClassName} {
+      text-decoration: underline;
+    }
   `;
 
 
   return (
-    <HeaderButton as={NavLink} to={props.link} activeClassName={props.activeClassName}>
+    <HeaderButton 
+    as={NavLink} 
+    to={props.link} 
+    activeClassName={activeClassName} 
+    exact={props.exact}>
       {props.children}
     </HeaderButton>
   )

@@ -4,7 +4,7 @@ import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 import { HeaderLink } from '../HeaderLink';
 
-function Header() {
+const Header = () => {
   const HeaderContainer = styled.header`
     background-color: #282c34;
     min-height: 70px;
@@ -18,13 +18,13 @@ function Header() {
     <HeaderContainer>
       <Link to="/">Nick Bertrand</Link>
 
-      <HeaderLink link="/" activeClassName="hurray">
+      <HeaderLink exact link="/">
         Home
       </HeaderLink>
-      <HeaderLink link="/projects" activeClassName="hurray">
+      <HeaderLink link="/projects">
         Projects
       </HeaderLink>
-      <HeaderLink link='/resume' activeClassName='hurray'>
+      <HeaderLink link='/resume'>
         Resume
       </HeaderLink>
     </HeaderContainer>
