@@ -6,7 +6,8 @@ import WindowPane from '../../containers/WindowPane/WindowPane';
 
 const Header = () => {
   const HeaderContainer = styled.div`
-    background-color: #282c34;
+    background-color: transparent;
+    position: fixed;
     width: 100%;
   `;
 

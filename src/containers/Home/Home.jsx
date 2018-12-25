@@ -4,7 +4,7 @@ import { Body } from '../../components/Body';
 export default function Home() {
   return (
     <div>
-      <Body/>
+      This is the Home Page
     </div>
   )
 }

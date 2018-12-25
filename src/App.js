@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 import styled from 'styled-components/macro'
+import { Body } from './components/Body';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import { Home } from './containers/Home';
-import { Resume } from './containers/Resume';
-import { Projects } from './containers/Projects';
 
 
 class App extends Component {
@@ -18,11 +16,7 @@ class App extends Component {
       <BrowserRouter>
         <AppContainer>
           <Header/>
-          <main>
-            <Route path="/" exact component={Home}/>
-            <Route path="/resume" component={Resume}/>
-            <Route path="/projects" component={Projects}/>
-          </main>
+          <Body/>
           <Footer/>
         </AppContainer>
       </BrowserRouter>
