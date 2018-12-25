@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
-import './App.css';
+import styled from 'styled-components/macro'
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './containers/Home';
@@ -10,9 +10,13 @@ import { Projects } from './containers/Projects';
 
 class App extends Component {
   render() {
+    const AppContainer = styled.div`
+        text-align: center;
+    `;
+  
     return (
       <BrowserRouter>
-        <div className="App">
+        <AppContainer>
           <Header/>
           <main>
             <Route path="/" exact component={Home}/>
@@ -20,7 +24,7 @@ class App extends Component {
             <Route path="/projects" component={Projects}/>
           </main>
           <Footer/>
-        </div>
+        </AppContainer>
       </BrowserRouter>
     );
   }
